@@ -7,15 +7,20 @@ void cp(){
     long long int n ;
     cin>>n ;
 
-    if(n==1) {
+    if(n==1){
         cout<<0<<"\n";
+        return ;
+    }
+
+    if(n==6){
+        cout<<1<<"\n";
         return ;
     }
 
     long long t1 = n;
     long long t2 = n ;
-    int c1 = 0 ;
-    int c2 = 0 ;
+    long long c1 = 0 ;
+    long long c2 = 0 ;
  
     while(t1%2==0){
         t1/=2;
@@ -32,14 +37,9 @@ void cp(){
         return ;
     }
 
-    if(c2==c1 && n>=6){
-        cout<<0<<"\n";
-        return ;
-    }
-
     n = n * (1<<(c2-c1));
 
-    int c = 0;
+    long long c = 0;
     while(n%6==0){
         n/=6;
         c++;
@@ -52,14 +52,12 @@ void cp(){
 
     cout<<-1<<"\n";
 
-
-
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t;
+    long long t;
     cin >> t;
 
     while(t--) {

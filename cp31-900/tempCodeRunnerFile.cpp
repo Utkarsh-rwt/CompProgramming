@@ -3,24 +3,36 @@ using namespace std;
 
 void cp(){
 
-    int n , y;
-    cin>>n>>y ;
+    long long x , n ;
 
-    long long maxi = 0;
-    long long sum = 0 ;
- 
-    for(int i=0 ; i<n ; i++){
+    cin>>x>>n ;
+    long long ans = x;
+    if(n==0){
+        cout<<x<<'\n';
+        return ;
+    }
+    
+    if(x%2!=0){
 
-        int x ; 
-        cin>>x;
+        if(n%4==0) 
+        if(n%4==1) ans+=n;
+        if(n%4==2) ans-=1;
+        if(n%4==3) ans-=(n+1);
 
-        sum += x;
-        maxi += ceil(double(x)/y);
     }
 
-    cout<<sum/y<<" "<<ceil(double(maxi)/y)<<"\n";
-    return ;
+    else {
 
+        if(n%4==0) 
+        if(n%4==1) ans-=n;
+        if(n%4==2) ans+=2*n-1;
+        if(n%4==3) ans-=1;
+
+
+    }
+
+    cout<<ans<<"\n";
+    
 }
 
 int main() {
@@ -34,4 +46,4 @@ cp();
     }
 
     return 0;
-} 
+}
