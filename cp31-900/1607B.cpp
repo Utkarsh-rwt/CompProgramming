@@ -2,40 +2,37 @@
 using namespace std;
 
 void cp(){
-    long long  x , n ;
-    cin>>x>> n ;
 
+    long long x , n ;
 
-    if(n<1){
-        cout<<x<<"\n";
+    cin>>x>>n ;
+    long long ans = x;
+    if(n==0){
+        cout<<x<<'\n';
         return ;
     }
-
-
-     
-    n--;
     
-    int r = n/4 * 2 ;
+    if(x%2!=0){
 
+        if(n%4==0) ;
+        if(n%4==1) ans+=n;
+        if(n%4==2) ans-=1;
+        if(n%4==3) ans-=(n+1);
 
-    if(x%2==0){
-
-        x--;
-
-        x
-        
     }
 
     else {
-        x++;
+
+        if(n%4==0) ;
+        if(n%4==1) ans-=n;
+        if(n%4==2) ans+=1;
+        if(n%4==3) ans+=(n+1);
+
 
     }
 
-
-
-    cout<<x<<"\n";
-    return ;
-
+    cout<<ans<<"\n";
+    
 }
 
 int main() {
