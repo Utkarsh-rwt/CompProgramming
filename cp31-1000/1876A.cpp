@@ -3,7 +3,7 @@ using namespace std;
 
 void cp(){
 
-   long long  n  , p ;
+   long long n  , p ;
     cin>>n>>p;
     vector <pair<int,int> > arr(n);
 
@@ -19,13 +19,13 @@ void cp(){
        sort(arr.begin(), arr.end());
 
 
-     long long  c =1 ;
+     long long c =1 ;
       long long cost = p ;
       
-      long long  i  =0 ;
+      long long i  =0 ;
       while(c<n && (i<n && arr[i].first< p)){
           
-       long long  x = arr[i].second;
+       long long x = arr[i].second;
         if(c+x<=n) cost+= arr[i].first*x;
         else cost += (n-c)*arr[i].first;
 
@@ -43,7 +43,7 @@ void cp(){
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-   long long  t;
+   long long t;
     cin >> t;
 
     while(t--) {
