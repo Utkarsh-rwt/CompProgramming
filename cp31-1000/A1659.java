@@ -11,7 +11,7 @@ import java.util.Scanner;
         int n,r,b;
 
         
-        n= sc.nextInt();
+        n=sc.nextInt();
         r=sc.nextInt();
         b=sc.nextInt();
          int slotofsize = r/(b+1); // b+1 is slots which can me made by b 
